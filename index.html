@@ -1,37 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relatório da Expedição ao Tesouro Perdido</title>
-</head>
-<body>
-    <h1>Relatório da Expedição ao Tesouro Perdido</h1>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>O Tesouro Perdido</title>
+    <style>
+      /* Estilo simples para aproximar a aparência pedida */
+      :root { --max-width: 760px; --accent: #0b63a8; }
+      body {
+        font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        margin: 0; padding: 2rem; background: #f7f9fb; color: #111;
+        display: flex; justify-content: center;
+      }
+      .container { max-width: var(--max-width); width: 100%; background: #fff; padding: 2rem; border-radius: 10px; box-shadow: 0 6px 18px rgba(12,20,30,0.08); }
+      header { border-bottom: 1px solid #e6eef8; padding-bottom: 1rem; margin-bottom: 1rem; }
+      h1 { margin: 0; color: var(--accent); font-size: 1.75rem; }
+      p { line-height: 1.6; margin: 0 0 1rem 0; }
+      ul { margin: 0 0 1rem 1.25rem; }
+      a.button-link { display: inline-block; text-decoration: none; padding: 0.5rem 0.8rem; border-radius: 6px; background: var(--accent); color: #fff; }
+      footer { margin-top: 1.5rem; font-size: 0.9rem; color: #556; }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>O Tesouro Perdido</h1>
+      </header>
 
-    <h2>Sumário</h2>
-    <ol>
-        <li>Relatório de Descoberta</li>
-        <li>Análise dos Artefatos</li>
-        <li>Próximos Passos</li>
-    </ol>
+      <main>
+        <p>
+          Um tesouro perdido há séculos foi encontrado na ilha de Cyberspace. A expedição, liderada pela Dra. Ada Lovelace, encontrou artefatos que
+          revelam a história de um povo antigo.
+        </p>
 
-    <h2>Relatório de Descoberta</h2>
-    <p>
-        <strong>O Tesouro Perdido</strong> foi encontrado na <strong>ilha de Cyberspace</strong>.
-        A descoberta é importante, pois a caixa continha artefatos muito valiosos.
-    </p>
+        <p>
+          Localização: Monte Sintaxe, 12. <br>
+          Data da descoberta: 25 de setembro.
+        </p>
 
-    <h3>Detalhes da Descoberta</h3>
-    <ul>
-        <li><strong>Localização da Caixa:</strong> Monte Sintaxe, Coordenada 12.</li>
-        <li><strong>Itens Encontrados:</strong>
-            <ol>
-                <li>Mapa antigo</li>
-                <li>Diário de bordo</li>
-                <li>Amuletos de jade</li>
-            </ol>
-        </li>
-        <li><strong>Status:</strong> <em>Em avaliação</em>.</li>
-    </ul>
-</body>
+        <ul>
+          <li>Localização: Monte Sintaxe, 12</li>
+          <li>Data da descoberta: 25 de setembro</li>
+        </ul>
+
+        <p>
+          <a class="button-link" href="file:///C:/Users/202412260012/Documents/GitHub/meu-site/tesouro.html">Leia mais sobre a descoberta em nosso blog.</a>
+        </p>
+      </main>
+
+      <footer>
+        Página gerada automaticamente a partir da cápsula do tempo digital.
+      </footer>
+    </div>
+  </body>
 </html>
