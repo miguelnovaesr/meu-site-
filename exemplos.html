@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>O Tesouro Perdido</title>
+    <style>
+      :root {
+        --max-width: 800px;
+        --accent: #0b63a8;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f7fa;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+      }
+
+      .container {
+        background-color: #fff;
+        max-width: var(--max-width);
+        width: 100%;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      }
+
+      h1 {
+        color: var(--accent);
+        text-align: center;
+      }
+
+      h2 {
+        color: var(--accent);
+        margin-top: 1.5rem;
+      }
+
+      p {
+        line-height: 1.6;
+      }
+
+      img {
+        display: block;
+        margin: 1rem auto;
+        border-radius: 8px;
+      }
+
+      ul {
+        margin-left: 1.2rem;
+      }
+
+      a.button-link {
+        display: inline-block;
+        text-decoration: none;
+        padding: 0.5rem 0.8rem;
+        border-radius: 6px;
+        background: var(--accent);
+        color: #fff;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 1rem;
+      }
+
+      caption {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        color: var(--accent);
+      }
+
+      thead {
+        background-color: #eaf2fa;
+      }
+
+      th, td {
+        border: 1px solid #ccc;
+        padding: 8px;
+        text-align: left;
+      }
+
+      tfoot td {
+        font-weight: bold;
+        text-align: center;
+        background-color: #f0f4f8;
+      }
+
+      form {
+        margin-top: 1.5rem;
+        border-top: 2px solid #e0e0e0;
+        padding-top: 1rem;
+      }
+
+      label {
+        display: block;
+        margin-top: 10px;
+      }
+
+      input, select {
+        padding: 5px;
+        margin-top: 5px;
+        width: 100%;
+        max-width: 300px;
+      }
+
+      .radio-group, .checkbox-group {
+        margin-top: 5px;
+      }
+
+      button, input[type="submit"] {
+        margin-top: 15px;
+        background-color: var(--accent);
+        color: #fff;
+        border: none;
+        padding: 8px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      footer {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        text-align: center;
+        color: #555;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>O Tesouro Perdido</h1>
+      </header>
+
+      <main>
+        <h2>Descoberta do Tesouro</h2>
+        <img src="tesouroperdido.webp" alt="Imagem ilustrativa do tesouro" width="200">
+
+        <p>
+          Um tesouro perdido há séculos foi encontrado na ilha de Cyberspace. A expedição, liderada pela Dra. Ada Lovelace, encontrou artefatos que
+          revelam a história de um povo antigo.
+        </p>
+
+        <ul>
+          <li>Localização: Monte Sintaxe, 12</li>
+          <li>Data da descoberta: 25 de setembro</li>
+        </ul>
+
+        <p>
+          <a class="button-link" href="tesouro.html">Leia mais sobre a descoberta em nosso blog.</a>
+        </p>
+
+        <h2>Catálogo de Artefatos Encontrados</h2>
+        <p>
+          O time de arqueólogos digitais precisa catalogar todos os artefatos encontrados na cápsula do tempo. 
+          Para melhor compreensão dos dados, as informações foram organizadas em uma tabela acessível.
+        </p>
+
+        <table>
+          <caption>Relatório de Artefatos - Cápsula do Tempo</caption>
+          <thead>
+            <tr>
+              <th>Categoria</th>
+              <th>Artefato</th>
+              <th>Peso (kg)</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Manuscrito</td><td>Mapa Antigo</td><td>0.8</td><td>Em avaliação</td></tr>
+            <tr><td>Manuscrito</td><td>Diário de Bordo</td><td>1.2</td><td>Analisado</td></tr>
+            <tr><td>Joalheria</td><td>Amuleto de Jade (Pequeno)</td><td>0.3</td><td>Analisado</td></tr>
+            <tr><td>Joalheria</td><td>Amuleto de Jade (Grande)</td><td>0.6</td><td>Em avaliação</td></tr>
+            <tr><td>Ferramenta</td><td>Bússola Criptografada</td><td>0.9</td><td>Pendente</td></tr>
+          </tbody>
+          <tfoot>
+            <tr><td colspan="4">Total de Itens Catalogados: 5</td></tr>
+          </tfoot>
+        </table>
+
+        <!-- Formulário simples -->
+        <h2>Cadastro de Voluntários</h2>
+        <form>
+          <label>Nome:</label>
+          <input type="text" name="nome">
+
+          <label>Senha:</label>
+          <input type="password" name="senha">
+
+          <label>E-mail:</label>
+          <input type="email" name="email">
+
+          <label>Telefone:</label>
+          <input type="tel" name="telefone">
+
+          <label>Gênero:</label>
+          <div class="radio-group">
+            <input type="radio" name="genero" value="masculino"> Masculino
+            <input type="radio" name="genero" value="feminino"> Feminino
+          </div>
+
+          <label>Disponibilidade:</label>
+          <div class="checkbox-group">
+            <input type="checkbox" name="turno" value="manha"> Manhã
+            <input type="checkbox" name="turno" value="tarde"> Tarde
+          </div>
+
+          <input type="submit" value="Enviar Cadastro">
+        </form>
+      </main>
+
+      <footer>
+        Página gerada automaticamente a partir da cápsula do tempo digital.
+      </footer>
+    </div>
+  </body>
+</html>
