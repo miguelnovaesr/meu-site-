@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabela do Brasileirão</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      color: #222;
+      margin: 40px;
+    }
+    h1 {
+      text-transform: uppercase;
+      color: #111;
+      border-bottom: 3px solid #000;
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    th, td {
+      padding: 10px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background: #f0f0f0;
+      text-transform: uppercase;
+      font-size: 13px;
+      color: #555;
+    }
+    tr:nth-child(even) { background: #fafafa; }
+    tr:hover { background: #f1f1f1; }
+
+    /* Cores por posição */
+    .pos1, .pos2 { color: blue; font-weight: bold; }
+    .pos3, .pos4 { color: cyan; font-weight: bold; }
+    .pos5, .pos6, .pos7, .pos8, .pos9, .pos10, .pos11, .pos12, .pos13, .pos14, .pos15, .pos16 {
+      color: green;
+      font-weight: bold;
+    }
+    .pos17, .pos18, .pos19, .pos20 { color: red; font-weight: bold; }
+
+    /* Bolinhas de resultados */
+    .bola {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin: 0 2px;
+    }
+    .vitoria { background: green; }
+    .empate { background: gray; }
+    .derrota { background: red; }
+
+    /* Legenda */
+    .legenda {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+    .legenda span {
+      display: inline-block;
+      margin-right: 15px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tabela</h1>
+  <table>
+    <tr>
+      <th>Classificação</th>
+      <th>P</th>
+      <th>J</th>
+      <th>V</th>
+      <th>E</th>
+      <th>D</th>
+      <th>GP</th>
+      <th>GC</th>
+      <th>SG</th>
+      <th>%</th>
+      <th>Últ. Jogos</th>
+    </tr>
+
+    <tr class="pos1"><td>1 Palmeiras</td><td>61</td><td>27</td><td>19</td><td>4</td><td>4</td><td>51</td><td>23</td><td>28</td><td>75</td>
+      <td><span class="vitoria bola"></span><span class="vitoria bola"></span><span class="vitoria bola"></span><span class="empate bola"></span><span class="derrota bola"></span></td>
+    </tr>
+    <tr class="pos2"><td>2 Flamengo</td><td>58</td><td>27</td><td>17</td><td>7</td><td>3</td><td>53</td><td>13</td><td>40</td><td>71</td>
+      <td><span class="vitoria bola"></span><span class="vitoria bola"></span><span class="empate bola"></span><span class="derrota bola"></span><span class="vitoria bola"></span></td>
+    </tr>
+    <tr class="pos3"><td>3 Cruzeiro</td><td>53</td><td>28</td><td>15</td><td>8</td><td>5</td><td>41</td><td>21</td><td>20</td><td>63</td>
+      <td><span class="empate bola"></span><span class="derrota bola"></span><span class="empate bola"></span><span class="empate bola"></span><span class="vitoria bola"></span></td>
+    </tr>
+    <tr class="pos4"><td>4 Mirassol</td><td>49</td><td>28</td><td>13</td><td>10</td><td>5</td><td>47</td><td>30</td><td>17</td><td>58</td>
+      <td><span class="derrota bola"></span><span class="vitoria bola"></span><span class="vitoria bola"></span><span class="vitoria bola"></span><span class="empate bola"></span></td>
+    </tr>
+    <tr class="pos5"><td>5 Botafogo</td><td>43</td><td>28</td><td>12</td><td>7</td><td>9</td><td>37</td><td>26</td><td>11</td><td>51</td>
+      <td><span class="vitoria bola"></span><span class="vitoria bola"></span><span class="derrota bola"></span><span class="vitoria bola"></span><span class="vitoria bola"></span></td>
+    </tr>
+    <tr class="pos6"><td>6 Bahia</td><td>43</td><td>26</td><td>12</td><td>7</td><td>7</td><td>34</td><td>30</td><td>4</td><td>55</td>
+      <td><span class="derrota bola"></span><span class="empate bola"></span><span class="vitoria bola"></span><span class="vitoria bola"></span><span class="derrota bola"></span></td>
+    </tr>
+    <tr class="pos7"><td>7 Fluminense</td><td>38</td><td>26</td><td>11</td><td>5</td><td>10</td><td>34</td><td>33</td><td>1</td><td>48</td>
+      <td><span class="empate bola"></span><span class="derrota bola"></span><span class="vitoria bola"></span><span class="vitoria bola"></span><span class="empate bola"></span></td>
+    </tr>
+    <tr class="pos8"><td>8 São Paulo</td><td>38</td><td>27</td><td>10</td><td>8</td><td>9</td><td>31</td><td>28</td><td>3</td><td>46</td>
+      <td><span class="vitoria bola"></span><span class="empate bola"></span><span class="derrota bola"></span><span class="derrota bola"></span><span class="vitoria bola"></span></td>
+    </tr>
+    <tr class="pos9"><td>9 Vasco</td><td>36</td><td>28</td><td>10</td><td>6</td><td>12</td><td>44</td><td>41</td><td>3</td><td>42</td>
+      <td><span class="empate bola"></span><span class="vitoria bola"></span><span class="vitoria bola"></span><span class="derrota bola"></span><span class="empate bola"></span></td>
+    </tr>
+    <tr class="pos10"><td>10 Bragantino</td><td>36</td><td>28</td><td>10</td><td>6</td><td>12</td><td>34</td><td>43</td><td>-9</td><td>42</td>
+      <td><span class="empate bola"></span><span class="derrota bola"></span><span class="empate bola"></span><span class="vitoria bola"></span><span class="derrota bola"></span></td>
+    </tr>
+    <tr class="pos11"><td>11 Ceará</td><td>35</td><td>27</td><td>9</td><td>8</td><td>10</td><td>27</td><td>25</td><td>2</td><td>43</td>
+      <td><span class="vitoria bola"></span><span class="vitoria bola"></span><span class="empate bola"></span><span class="derrota bola"></span><span class="empate bola"></span></td>
+    </tr>
+    <tr class="pos12"><td>12 Corinthians</td><td>33</td><td>28</td><td>8</td><td>9</td><td>11</td><td>30</td><td>35</td><td>-5</td><td>39</td>
+      <td><span class="derrota bola"></span><span class="derrota bola"></span><span class="vitoria bola"></span><span class="empate bola"></span><span class="derrota bola"></span></td>
+    </tr>
+    <tr class="pos13"><td>13 Grêmio</td><td>33</td><td>27</td><td>8</td><td>9</td><td>10</td><td>28</td><td>33</td><td>-5</td><td>40</td>
+      <td><span class="vitoria bola"></span><span class="empate bola"></span><span class="derrota bola"></span><span class="empate bola"></span><span class="vitoria bola"></span></td>
+    </tr>
+    <tr class="pos14"><td>14 Atlético-MG</td><td>33</td><td>27</td><td>8</td><td>9</td><td>10</td><td>26</td><td>31</td><td>-5</td><td>40</td>
+      <td><span class="derrota bola"></span><span class="empate bola"></span><span class="vitoria bola"></span><span class="empate bola"></span><span class="derrota bola"></span></td>
+    </tr>
+    <tr class="pos15"><td>15 Internacional</td><td>32</td><td>27</td><td>8</td><td>11</td><td>8</td><td>33</td><td>41</td><td>-8</td><td>39</td>
+      <td><span class="vitoria bola"></span><span class="empate bola"></span><span class="derrota bola"></span><span class="empate bola"></span><span class="derrota bola"></span></td>
+    </tr>
+    <tr class="pos16"><td>16 Santos</td><td>31</td><td>27</td><td>8</td><td>7</td><td>12</td><td>28</td><td>39</td><td>-11</td><td>38</td>
+      <td><span class="empate bola"></span><span class="derrota bola"></span><span class="vitoria bola"></span><span class="empate bola"></span><span class="derrota bola"></span></td>
+    </tr>
+    <tr class="pos17"><td>17 Vitória</td><td>25</td><td>27</td><td>5</td><td>10</td><td>12</td><td>24</td><td>42</td><td>-18</td><td>30</td>
+      <td><span class="derrota bola"></span><span class="derrota bola"></span><span class="derrota bola"></span><span class="derrota bola"></span><span class="derrota bola"></span></td>
+    </tr>
+    <tr class="pos18"><td>18 Fortaleza</td><td>24</td><td>27</td><td>6</td><td>6</td><td>15</td><td>26</td><td>43</td><td>-17</td><td>29</td>
+      <td><span class="vitoria bola"></span><span class="derrota bola"></span><span class="derrota bola"></span><span class="empate bola"></span><span class="derrota bola"></span></td>
+    </tr>
+    <tr class="pos19"><td>19 Juventude</td><td>23</td><td>27</td><td>6</td><td>5</td><td>16</td><td>22</td><td>52</td><td>-30</td><td>28</td>
+      <td><span class="empate bola"></span><span class="empate bola"></span><span class="derrota bola"></span><span class="empate bola"></span><span class="derrota bola"></span></td>
+    </tr>
+    <tr class="pos20"><td>20 Sport</td><td>17</td><td>27</td><td>2</td><td>11</td><td>14</td><td>21</td><td>42</td><td>-21</td><td>20</td>
+      <td><span class="derrota bola"></span><span class="empate bola"></span><span class="empate bola"></span><span class="empate bola"></span><span class="derrota bola"></span></td>
+    </tr>
+  </table>
+
+  <div class="legenda">
+    <span style="color: blue;">■ Libertadores</span>
+    <span style="color: cyan;">■ Pré-Libertadores</span>
+    <span style="color: green;">■ Sul-Americana</span>
+    <span style="color: red;">■ Rebaixados</span><br><br>
+    <span><span class="bola vitoria"></span> vitória</span>
+    <span><span class="bola empate"></span> empate</span>
+    <span><span class="bola derrota"></span> derrota</span>
+  </div>
+</body>
+</html>
