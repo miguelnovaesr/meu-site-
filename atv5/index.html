@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guia de CSS Grid & Flexbox</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      color: #333;
+    }
+
+    .container {
+      margin-top: 40px;
+    }
+
+    .grid-example, .flex-example {
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin-top: 20px;
+    }
+
+    .grid-box {
+      background: #ade8f4;
+      padding: 10px;
+      border: 1px solid #0077b6;
+      text-align: center;
+    }
+
+    .flex-item {
+      background: #caf0f8;
+      padding: 15px;
+      border: 1px solid #48cae4;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Guia Básico de CSS Grid e Flexbox</h1>
+
+  <div class="container">
+    <!-- Seção de Grid -->
+    <section>
+      <h2>CSS Grid Layout</h2>
+      <p>Algumas das principais propriedades do CSS Grid (baseado no guia da Origamid):</p>
+      <ul>
+        <li><code>display: grid;</code> — transforma o elemento em <strong>grid container</strong>. :contentReference[oaicite:0]{index=0}</li>
+        <li><code>grid-template-columns</code> — define colunas do grid. :contentReference[oaicite:1]{index=1}</li>
+        <li><code>grid-template-rows</code> — define linhas. :contentReference[oaicite:2]{index=2}</li>
+        <li><code>grid-template-areas</code> — agrupa áreas nomeadas para posicionamento. :contentReference[oaicite:3]{index=3}</li>
+        <li><code>gap</code> — define espaçamento entre itens (linhas e colunas). :contentReference[oaicite:4]{index=4}</li>
+        <li><code>grid-auto-flow</code> — controla como itens implicítos são colocados (linhas ou colunas). :contentReference[oaicite:5]{index=5}</li>
+        <li><code>justify-content</code>, <code>align-content</code> — alinham o conjunto de itens no container. :contentReference[oaicite:6]{index=6}</li>
+        <li><code>justify-items</code>, <code>align-items</code> — alinham os itens dentro de suas células. :contentReference[oaicite:7]{index=7}</li>
+        <li><code>grid-column</code>, <code>grid-row</code> — posicionam cada item em colunas/linhas específicas. :contentReference[oaicite:8]{index=8}</li>
+        <li><code>grid-area</code> — atalho para definir início/fim de linha e coluna para um item. :contentReference[oaicite:9]{index=9}</li>
+        <li><code>justify-self</code>, <code>align-self</code> — alinham individualmente cada item na sua célula. :contentReference[oaicite:10]{index=10}</li>
+      </ul>
+
+      <div class="grid-example" style="
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: auto;
+        gap: 10px;
+        justify-items: center;
+        align-items: center;
+      ">
+        <div class="grid-box" style="grid-column: 1 / span 3;">Cabeçalho (grid-area)</div>
+        <div class="grid-box" style="grid-column: 1;">Sidebar</div>
+        <div class="grid-box" style="grid-column: 2;">Conteúdo principal</div>
+        <div class="grid-box" style="grid-column: 3;">Anúncio / Extra</div>
+        <div class="grid-box" style="grid-column: 1 / span 3;">Rodapé</div>
+      </div>
+    </section>
+
+    <!-- Seção de Flexbox -->
+    <section>
+      <h2>CSS Flexbox</h2>
+      <p>Principais propriedades do Flexbox (baseado no guia do CSS-Tricks):</p>
+      <ul>
+        <li><code>display: flex;</code> — torna o elemento um <strong>flex container</strong>. :contentReference[oaicite:11]{index=11}</li>
+        <li><code>flex-direction</code> — define a direção dos itens (row, column, row-reverse, etc). :contentReference[oaicite:12]{index=12}</li>
+        <li><code>flex-wrap</code> — controla se os itens quebram a linha (wrap, nowrap, wrap-reverse). :contentReference[oaicite:13]{index=13}</li>
+        <li><code>flex-flow</code> — atalho para <code>flex-direction</code> + <code>flex-wrap</code>. :contentReference[oaicite:14]{index=14}</li>
+        <li><code>justify-content</code> — alinha itens no eixo principal. :contentReference[oaicite:15]{index=15}</li>
+        <li><code>align-items</code> — alinha itens no eixo transversal. :contentReference[oaicite:16]{index=16}</li>
+        <li><code>align-content</code> — alinha linhas de itens quando há múltiplas linhas (caso use wrap). :contentReference[oaicite:17]{index=17}</li>
+        <li><code>flex-grow</code> — define quanto um item pode crescer para preencher espaço extra. :contentReference[oaicite:18]{index=18}</li>
+        <li><code>flex-shrink</code> — define se o item pode encolher se não houver espaço. :contentReference[oaicite:19]{index=19}</li>
+        <li><code>flex-basis</code> — define tamanho base antes de distribuir o espaço livre. :contentReference[oaicite:20]{index=20}</li>
+        <li><code>flex</code> — atalho para <code>flex-grow</code>, <code>flex-shrink</code>, e <code>flex-basis</code>. :contentReference[oaicite:21]{index=21}</li>
+        <li><code>order</code> — reordena os itens dentro do container. :contentReference[oaicite:22]{index=22}</li>
+      </ul>
+
+      <div class="flex-example" style="
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        height: 200px;
+      ">
+        <div class="flex-item" style="flex: 1;">Item 1</div>
+        <div class="flex-item" style="flex: 2;">Item 2 (cresce mais)</div>
+        <div class="flex-item" style="flex: 1;">Item 3</div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
